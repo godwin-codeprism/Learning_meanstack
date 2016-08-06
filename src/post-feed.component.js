@@ -13,14 +13,14 @@ var PostFeed = (function () {
     function PostFeed() {
     }
     __decorate([
-        core_1.Input('feedsToWatch'),
+        core_1.Input('feedsToWatch'), 
         __metadata('design:type', Object)
     ], PostFeed.prototype, "feeds", void 0);
     PostFeed = __decorate([
         core_1.Component({
             selector: 'post-feed',
             templateUrl: 'src/views/post-feed.component.html'
-        }),
+        }), 
         __metadata('design:paramtypes', [])
     ], PostFeed);
     return PostFeed;

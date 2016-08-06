@@ -18,7 +18,7 @@ var AppComponent = (function () {
             selector: 'g-app',
             templateUrl: 'src/views/app.component.html',
             directives: [post_form_component_1.PostForm]
-        }),
+        }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;

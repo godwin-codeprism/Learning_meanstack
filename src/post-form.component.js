@@ -31,7 +31,7 @@ var PostForm = (function () {
             selector: 'post-form',
             directives: [forms_1.REACTIVE_FORM_DIRECTIVES, post_feed_component_1.PostFeed],
             templateUrl: 'src/views/post-form.component.html'
-        }),
+        }), 
         __metadata('design:paramtypes', [forms_1.FormBuilder])
     ], PostForm);
     return PostForm;
