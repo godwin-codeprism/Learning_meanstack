@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8" *ngFor="let feed of feeds">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    {{feed.created_by}} says:
+                </div>
+                <div class="panel-body">
+                   {{feed.text}} on {{feed.created_at | date:"h:mma 'on' MMM d,y"}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
