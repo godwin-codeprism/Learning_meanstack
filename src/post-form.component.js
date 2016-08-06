@@ -37,4 +37,3 @@ var PostForm = (function () {
     return PostForm;
 }());
 exports.PostForm = PostForm;
-//# sourceMappingURL=post-form.component.js.map

@@ -26,4 +26,3 @@ var PostFeed = (function () {
     return PostFeed;
 }());
 exports.PostFeed = PostFeed;
-//# sourceMappingURL=post-feed.component.js.map
