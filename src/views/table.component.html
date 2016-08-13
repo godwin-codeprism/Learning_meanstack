@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" [(ngModel)]="query" (ngModelChange)="onSearch($event)" placeholder="Search">
+                    <span class="btn btn-info input-group-addon">Search</span>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Short Name</td>
+                    <td>Bio</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of lists">
+                    <td>{{list.name}}</td>
+                    <td>{{list.shortname}}</td>
+                    <td>{{list.bio}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

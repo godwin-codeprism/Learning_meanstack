@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var forms_1 = require('@angular/forms');
+var http_1 = require('@angular/http');
 var post_feed_component_1 = require('./post-feed.component');
 var PostForm = (function () {
-    function PostForm(formBuilder) {
+    function PostForm(formBuilder, http) {
+        this.http = http;
         this.post = [];
         this.created_by = new forms_1.FormControl('', forms_1.Validators.required);
         this.text = new forms_1.FormControl('', forms_1.Validators.required);
@@ -24,15 +26,19 @@ var PostForm = (function () {
     }
     PostForm.prototype.onPost = function (data) {
         this.post.unshift(data);
-        console.log(this.post);
+        var body = JSON.stringify({ "name": "godwin" });
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post('/api/message', body, options);
     };
     PostForm = __decorate([
+        core_1.Injectable(),
         core_1.Component({
             selector: 'post-form',
             directives: [forms_1.REACTIVE_FORM_DIRECTIVES, post_feed_component_1.PostFeed],
             templateUrl: 'src/views/post-form.component.html'
         }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder])
+        __metadata('design:paramtypes', [forms_1.FormBuilder, http_1.Http])
     ], PostForm);
     return PostForm;
 }());

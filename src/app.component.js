@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var post_form_component_1 = require('./post-form.component');
+var table_component_1 = require('./table.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -17,7 +18,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'g-app',
             templateUrl: 'src/views/app.component.html',
-            directives: [post_form_component_1.PostForm]
+            directives: [post_form_component_1.PostForm, table_component_1.List]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
